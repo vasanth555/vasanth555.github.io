@@ -1,0 +1,46 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: var(--bg-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.link:hover {
+  color: var(--text-primary);
+  text-shadow: var(--shadow-glow);
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* In a real app we'd add a hamburger menu */
+  }
+}

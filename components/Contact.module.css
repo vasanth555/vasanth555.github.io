@@ -1,0 +1,166 @@
+.contactSection {
+  padding: 8rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+
+.infoSide {
+  flex: 1;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 450px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a.value:hover {
+  color: var(--accent-primary);
+}
+
+.formSide {
+  flex: 1;
+  width: 100%;
+}
+
+.form {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputLabel {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  background: rgba(11, 12, 16, 0.5);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  padding: 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  padding: 1.2rem;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--accent-primary);
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.submitBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--accent-primary);
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.submitBtn:hover::before {
+  width: 100%;
+}
+
+.submitBtn:hover {
+  color: var(--bg-base);
+}
+
+@media (max-width: 968px) {
+  .container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .infoSide {
+    text-align: center;
+  }
+  
+  .description {
+    margin: 0 auto 3rem;
+  }
+  
+  .contactDetails {
+    align-items: center;
+  }
+  
+  .form {
+    padding: 2rem;
+  }
+}

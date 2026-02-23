@@ -1,0 +1,95 @@
+.educationSection {
+  padding: 8rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-accent);
+  box-shadow: 0 0 10px var(--primary-accent);
+}
+
+.card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+}
+
+.degree, .certTitle {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.institution {
+  color: #a0a0b0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--primary-accent);
+}
+
+.date, .details {
+  background: rgba(0, 240, 255, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.certValidation {
+  color: #a0a0b0;
+  font-size: 0.9rem;
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
